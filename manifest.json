@@ -1,0 +1,20 @@
+{
+    "manifest_version": 3,
+    "name": "Brave Keybind to Open Site",
+    "version": "1.0",
+    "description": "Open a specific website with a keybind in Brave.",
+    "permissions": ["tabs"],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "commands": {
+      "open-site": {
+        "suggested_key": {
+          "default": "Ctrl+Shift+O",
+          "mac": "Command+Shift+O"
+        },
+        "description": "Open a specific site in Brave"
+      }
+    }
+  }
+  

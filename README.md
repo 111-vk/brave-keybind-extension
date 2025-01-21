@@ -1,4 +1,3 @@
-
 # Brave Keybind Extension
 
 This guide will walk you through the creation of a simple Brave browser extension that allows you to open a specific website using a keybind.
@@ -10,19 +9,17 @@ The extension uses a background service worker to listen for a predefined keybin
 
 ## 2. File Structure
 
-Create a folder named `brave-keybind-extension` and add the following files:
+Create a folder named brave-keybind-extension and add the following files:
 
-```
 brave-keybind-extension/
 ├── manifest.json
 ├── background.js
-```
 
 ---
 
 ## 3. Code Files
 
-### 3.1. `manifest.json`
+### 3.1. manifest.json
 This file defines the extension's metadata and settings.
 
 ```json
@@ -47,7 +44,7 @@ This file defines the extension's metadata and settings.
 }
 ```
 
-### 3.2. `background.js`
+### 3.2. background.js
 This file contains the logic to open the specified website when the keybind is triggered.
 
 ```javascript
@@ -67,60 +64,48 @@ chrome.commands.onCommand.addListener((command) => {
    - Launch the Brave browser.
 
 2. **Access the Extensions Page**:
-   - Enter `brave://extensions/` in the address bar and press Enter.
+   - Enter brave://extensions/ in the address bar and press Enter.
 
 3. **Enable Developer Mode**:
    - Toggle the **Developer mode** switch in the top-right corner.
 
 4. **Load the Extension**:
    - Click on the **Load unpacked** button.
-   - Select the `brave-keybind-extension` folder where you saved the files.
+   - Select the brave-keybind-extension folder where you saved the files.
 
 5. **Verify Installation**:
    - The extension should now appear in the list of installed extensions.
 
 ---
 
-## 5. Testing the Keybind
-
-1. **Trigger the Keybind**:
-   - Press the keybind defined in `manifest.json`. By default, it is:
-     - **Windows/Linux**: `Ctrl+Shift+O`
-     - **Mac**: `Command+Shift+O`
-
-2. **Observe the Behavior**:
-   - The specified website (e.g., `https://www.example.com`) should open in a new tab.
-
----
-
-## 6. Customizing the Keybind
+## 5. Setting Up the Keybind
 
 1. **Access Shortcut Settings**:
-   - Go to `brave://extensions/shortcuts` in the Brave browser.
+   - Go to brave://extensions/shortcuts in the Brave browser.
 
-2. **Update the Keybind**:
+2. **Create or Update a Keybind**:
    - Locate your extension in the list.
-   - Set a new keybind by clicking on the current shortcut and entering a new combination.
+   - Assign a keybind by clicking on the current shortcut field and entering a new combination (e.g., `Ctrl+Shift+O` or `Command+Shift+O`).
 
 ---
 
-## 7. Notes
+## 6. Notes
 
-- **Replace the URL**: In `background.js`, replace `https://www.example.com` with the URL of your choice.
+- **Replace the URL**: In background.js, replace https://www.example.com with the URL of your choice.
 - **Keybind Conflicts**: Ensure that the keybind you choose does not conflict with existing Brave shortcuts.
 - **Cross-Browser Compatibility**: This extension also works on other Chromium-based browsers like Chrome, Edge, and Opera.
 
 ---
 
-## 8. Troubleshooting
+## 7. Troubleshooting
 
 - **Extension Not Loading**:
-  - Verify that the `manifest.json` and `background.js` files are correctly placed and have valid syntax.
+  - Verify that the manifest.json and background.js files are correctly placed and have valid syntax.
 - **Keybind Not Working**:
-  - Check the keybind settings at `brave://extensions/shortcuts`.
+  - Check the keybind settings at brave://extensions/shortcuts.
   - Ensure the extension is active.
 - **Site Not Opening**:
-  - Confirm that the URL in `background.js` is correct and accessible.
+  - Confirm that the URL in background.js is correct and accessible.
 
 ---
 

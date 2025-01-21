@@ -9,11 +9,13 @@ The extension uses a background service worker to listen for a predefined keybin
 
 ## 2. File Structure
 
-Create a folder named brave-keybind-extension and add the following files:
+Create a folder named `brave-keybind-extension` and add the following files:
 
+```
 brave-keybind-extension/
 ├── manifest.json
 ├── background.js
+```
 
 ---
 
@@ -71,7 +73,7 @@ chrome.commands.onCommand.addListener((command) => {
 
 4. **Load the Extension**:
    - Click on the **Load unpacked** button.
-   - Select the brave-keybind-extension folder where you saved the files.
+   - Select the `brave-keybind-extension` folder where you saved the files.
 
 5. **Verify Installation**:
    - The extension should now appear in the list of installed extensions.

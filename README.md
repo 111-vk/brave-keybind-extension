@@ -87,7 +87,7 @@ chrome.commands.onCommand.addListener((command) => {
 
 2. **Create or Update a Keybind**:
    - Locate your extension in the list.
-   - Assign a keybind by clicking on the current shortcut field and entering a new combination (e.g., `Ctrl+Shift+O` or `Command+Shift+O`).
+   - Assign a keybind by clicking on the current shortcut field and entering a new combination (e.g., `Ctrl+Y` or `Command+y`).
 
 ---
 

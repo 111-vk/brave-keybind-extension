@@ -2,6 +2,8 @@
 
 This guide will walk you through the creation of a simple Brave browser extension that allows you to open a specific website using a keybind.
 
+> **Note:** This extension is meant to be used locally. You can customize it to your needs by modifying the source code.
+
 ## 1. Overview
 The extension uses a background service worker to listen for a predefined keybind. When the keybind is triggered, the extension opens a new tab with the specified website.
 
